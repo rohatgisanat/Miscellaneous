@@ -45,7 +45,7 @@ public class Hamming {
             }
         }
         for (int j = 0; j < finalcode.size(); j++) {
-            if (finalcode.get(j) == -1) {           //if the index has -1 then calculate parity for that index
+            if ((int)finalcode.get(j) == -1) {           //if the index has -1 then calculate parity for that index
                 ke = obj.getbit(finalcode, j);
                 finalcode.set(j, ke);
             }
@@ -79,7 +79,7 @@ public class Hamming {
             dum = -1;
             return dum;
         } else {
-            dum = (code2.elementAt(pos) == '0') ? (0) : (1);
+            dum = ( (char)code2.elementAt(pos) == '0') ? (0) : (1);
         }
 
         return dum;
